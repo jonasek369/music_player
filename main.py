@@ -13,13 +13,12 @@ song_name = "name"
 class Ui_MainWindow(object):
     def click_skip(self):
         dir_path = os.path.dirname(os.path.realpath(__file__))
-
-        dirs = "songs/"
-
+        #dir of the folder with songs
+        dirs = "change dir here"
+        #randomly chose from the dir any song
         songs_get = os.listdir(dirs)
 
         randoms = random.choice(songs_get)
-        print(randoms)
         dirr = (dir_path + "/" + dirs + randoms)
 
         mixer.stop()
